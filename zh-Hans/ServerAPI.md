@@ -8,71 +8,6 @@
 - 下文提到的函数名则为导出函数名。
 - 以LLSE-js插件为例，使用 `ll.import("Server_ModAPI", "funtion_name")` 导入，其中 `funtion_name` 应替换为对应的导入函数。
 
-#### 创建一个悬浮字
-
-通过此API，注册优雅的仅发包悬浮字，GMLIB会通过假数据包生成仅客户端看得见的悬浮字，不会对服务端生物ai造成任何影响
-
-发送给全体
-`GMLib_Server.sendAddFloatingTextPacket(text, pos, dimid)`
-
-- 参数：
-  - text : `String`  
-    悬浮字的展示内容
-  - pos : `Vec3`  
-    悬浮字的展示位置
-  - dimid : `Integer`
-    悬浮字的展示维度ID（由于底层函数坐标原型为`Vec3`，因此不会传入维度，维度信息需要单独传入）
-- 返回值：`Integer`
-  悬浮字的id，如果为`-1`则表示生成失败
-
-发送给个人
-`GMLib_Server.sendAddFloatingTextPacketToPlayer(text, pos, dimid, player)`
-
-- 参数：
-  - text : `String`  
-    悬浮字的展示内容
-  - pos : `Vec3`  
-    悬浮字的展示位置
-  - dimid : `Integer`
-    悬浮字的展示维度ID（由于底层函数坐标原型为`Vec3`，因此不会传入维度，维度信息需要单独传入）
-  - dimid : `Player`
-    能看见悬浮字的玩家
-- 返回值：`Integer`
-  悬浮字的id，如果为`-1`则表示生成失败
-
-> 注意：
-> 创建悬浮字应在 "onServerStarted" 之后开始
-
-<br>
-
-#### 移除一个悬浮字
-
-通过此函数，你可以移除一个先前创建的悬浮字
-
-`GMLib_Server.sendDeleteFloatingTextPacket(id)`
-
-- 参数：
-  - id : `Integer`
-    悬浮字的id
-- 返回值:无
-
-<br>
-
-#### 修改一个已存在的悬浮字
-
-通过此函数，你可以修改先前创建的悬浮字内容
-
-`GMLib_Server.sendUpdateFloatingTextPacket(id, newtext)`
-
-- 参数：
-  - newtext : `String`  
-    悬浮字的更新展示内容
-  - id : `Integer`
-    悬浮字的id
-- 返回值：无
-
-<br>
-
 ## 生成一个实体
 
 通过此函数，你可以生成一个实体。（不同于 `mc.spawnMob` ，此函数可以生成任意实体，不限于生物）
@@ -142,6 +77,74 @@
     投掷弹射物随机角度偏移量，设置为0表示无偏移，必须大于等于0
 - 返回值：`Boolean`
   是否投掷成功
+
+<br>
+
+## 悬浮字API
+#### 发送一个悬浮字给全部玩家
+
+通过此API，注册优雅的仅发包悬浮字，GMLIB会通过假数据包生成仅客户端看得见的悬浮字，不会对服务端生物ai造成任何影响
+
+`GMLib_Server.sendAddFloatingTextPacket(text, pos, dimid)`
+
+- 参数：
+  - text : `String`  
+    悬浮字的展示内容
+  - pos : `Vec3`  
+    悬浮字的展示位置
+  - dimid : `Integer`
+    悬浮字的展示维度ID（由于底层函数坐标原型为`Vec3`，因此不会传入维度，维度信息需要单独传入）
+- 返回值：`Integer`
+  悬浮字的id，如果为`-1`则表示生成失败
+
+<br>
+
+#### 发送一个悬浮字给单个玩家
+
+`GMLib_Server.sendAddFloatingTextPacketToPlayer(text, pos, dimid, player)`
+
+- 参数：
+  - text : `String`  
+    悬浮字的展示内容
+  - pos : `Vec3`  
+    悬浮字的展示位置
+  - dimid : `Integer`
+    悬浮字的展示维度ID（由于底层函数坐标原型为`Vec3`，因此不会传入维度，维度信息需要单独传入）
+  - dimid : `Player`
+    能看见悬浮字的玩家
+- 返回值：`Integer`
+  悬浮字的id，如果为`-1`则表示生成失败
+
+> 注意：
+> 创建悬浮字应在 "onServerStarted" 之后开始
+
+<br>
+
+#### 移除一个悬浮字
+
+通过此函数，你可以移除一个先前创建的悬浮字
+
+`GMLib_Server.sendDeleteFloatingTextPacket(id)`
+
+- 参数：
+  - id : `Integer`
+    悬浮字的id
+- 返回值:无
+
+<br>
+
+#### 修改一个已存在的悬浮字
+
+通过此函数，你可以修改先前创建的悬浮字内容
+
+`GMLib_Server.sendUpdateFloatingTextPacket(id, newtext)`
+
+- 参数：
+  - newtext : `String`  
+    悬浮字的更新展示内容
+  - id : `Integer`
+    悬浮字的id
+- 返回值：无
 
 <br>
 
