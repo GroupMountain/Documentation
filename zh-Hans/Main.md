@@ -39,8 +39,8 @@ GMLib.registerShapelessRecipe("groupmountain:quartz_recipe", ["minecraft:quartz_
 > 对于原生插件，可直接参考头文件中注释
 > 此处提供非原生插件的API文档
 
-- 👉[EventAPI](/EventAPI.md)👈 事件监听API。
-- 👉[ServerAPI](/Server.md)👈 插件开发API。
+- 👉[EventAPI](/EventAPI.md)👈 事件监听API（待完成）。
+- 👉[ServerAPI](/ServerAPI.md)👈 插件开发API。
 - 👉[ModAPI](/ModAPI.md)👈 Mod开发API。
 
 ## 常见问题
