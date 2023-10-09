@@ -6,7 +6,7 @@
 
 ## 什么是GMLIB？
 
-**GMLIB**是一个用于**适用于 LiteLoaderBDS 插件加载器的插件开发前置库** 提供为开发者更多封装好的API。
+**GMLIB**是一个用于**适用于 LiteLoaderBDS 插件加载器的插件开发前置库** 提供为开发者更多封装好的API。版本只支持1.20.30/1.20.31
 
 👉[点击此处](https://github.com/GroupMountain/GMLIB/blob/main/README.md)👈 查看更详细的介绍。
 
