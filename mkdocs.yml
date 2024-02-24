@@ -1,0 +1,14 @@
+site_name: GMLIB
+repo_url: https://github.com/GroupMountain/GMLIB
+nav:
+  - 主页: "index.md"
+  - API:
+      - CPP开发API:
+          - 事件:
+              - "实体事件": "./cpp/event/entity.md"
+              - "全局事件": "./cpp/event/Level.md"
+              - "玩家事件": "./cpp/event/player.md"
+          - "接口": "./server.md"
+      - LSE开发API: "About.md"
+  - 关于: "About.md"
+theme: material
