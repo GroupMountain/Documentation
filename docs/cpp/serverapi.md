@@ -1,0 +1,13 @@
+### ActorAPI  实体API
+### BinaryStreamAPI  二进制流API
+### CompoundTagAPI  复合标签API
+### FakeListAPI  玩家列表API，暂停界面的列表
+### FloatingTextAPI  悬浮字API
+### ItemStackAPI  物品API
+### LevelAPI  存档（全局）API
+### NetworkPacketAPI  网络数据包API
+### PlaceholderAPI  PAPI（gx跑路了）
+### PlayerAPI  玩家API
+### ScoreboardAPI  记分板API
+### SpawnerAPI  生成器API：用于生成实体、生物、物品等
+### UserCache  记录存在过的玩家信息

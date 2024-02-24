@@ -8,7 +8,7 @@ nav:
               - "实体事件": "./cpp/event/entity.md"
               - "全局事件": "./cpp/event/Level.md"
               - "玩家事件": "./cpp/event/player.md"
-          - "接口": "./server.md"
+          - "接口": "./cpp/serverapi.md"
       - LSE开发API: "About.md"
   - 关于: "About.md"
 theme: material
