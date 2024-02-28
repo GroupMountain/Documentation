@@ -9,6 +9,8 @@ nav:
               - "全局事件": "./cpp/event/Level.md"
               - "玩家事件": "./cpp/event/player.md"
           - "接口": "./cpp/serverapi.md"
-      - LSE开发API: "About.md"
+      - LSE开发API:
+        - "ModAPI": "./lse/mod.md"
+        - "虚拟在线玩家API": "./lse/fakelist.md"
   - 关于: "About.md"
 theme: material
