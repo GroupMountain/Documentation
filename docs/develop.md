@@ -1,15 +1,16 @@
-# GMLIB
-GMLIB是由GroupMountain开发的一个基于LeviLamina的前置库。
+# 原生插件开发（C++）
+- 导入静态库和头文件
+往xmake.lua里面添加对应的库，并克隆SDK-GMLIB作为子模块。
+> 这里直接建议使用我们提供的插件模板，一切工作均已就绪，无需手动操作。
+> [CPP 插件开发模板](https://github.com/GroupMountain/GMLIB-Plugin-Template)
+- 编写并测试你的插件
+> API功能请参照命名。如有问题可在交流群交流。
 
-GMLIB 封装了大量 LeviLamina 未直接提供的API，为插件开发者提供了更多便利。
-插件开发者可以直接调用 GMLIB 中已经封装的API，而非重复造轮子。
-本前置库旨在为插件开发提供更方便的操作函数和更丰富的监听事件，使得插件开发变得更容易。利用封装好的API可以快速实现某些功能，而不需要重复造轮子。
-如果你在开发过程中发现需要某些API，或者需要监听某个事件，可以前往Github反馈。如果你有能力封装API并提供，也欢迎PR。
-
-# GMLIB QQ交流群： 931689535
-## 注意事项
-
-* 没有配置文件，没有直接可用的功能，全部功能默认关闭。仅提供API，需要其它插件调用API后才会开启对应功能。
-* 仅在minebbs与github上发布，未经允许禁止以任何方式整合
-* 由于精力有限，没有精力每次更新都同步论坛，因此论坛可能不是最新版。如需获取最新版，请到Github下载。
-
+# 脚本插件开发（LSE）
+- `GMLIB` 本身并不提供脚本插件API，你需要安装扩展模块 `GMLIB-LegacyRemoteCallApi`
+- 安装完前置模块后，正常创建插件并导入API
+使用示例：
+```javascript
+const { Minecraft } = require('./GMLIB-LegacyRemoteCallApi/lib/GMLIB_API-JS');
+```
+- 编写并测试你的插件

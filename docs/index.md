@@ -1,10 +1,9 @@
 # GMLIB
-## Group Mountain Library
+### QQ交流群: 931689535
 [![Latest Tag](https://img.shields.io/github/v/tag/GroupMountain/GMLIB?label=LATEST%20TAG&style=for-the-badge)
 ![GitHub Releases (by Asset)](https://img.shields.io/github/downloads/GroupMountain/GMLIB/latest/total?style=for-the-badge)
 ](https://github.com/GroupMountain/GMLIB/releases/latest)  
 
-## QQ交流群: 931689535
 
 `GMLIB` 是一个基于 `LeviLamina` 加载器的第三方插件前置库。为基岩版专用服务器 —— `Bedrock Dedicated Server`（以下简称**
 BDS**）的插件开发者提供更多的API，一定程度上弥补了 `LeviLamina` 的API缺口。
@@ -13,12 +12,16 @@ BDS**）的插件开发者提供更多的API，一定程度上弥补了 `LeviLam
 插件开发者可以直接调用 `GMLIB` 中的现成API，而非重复造轮子。
 
 `GMLIB` 的API支持使用头文件和静态链接库导入，我们提供了模板插件和GMLIB的SDK。
-对于调用 `GMLIB API` 的代码来说，如果GMLIB没有API改动，仅需本项目在底层适配更新即可，给插件开发与维护带来了很大的便利。
+对于调用 `GMLIB_API` 的代码来说，如果GMLIB没有API改动，仅需本项目在底层适配更新即可，给插件开发与维护带来了很大的便利。
 
 `GMLIB` 的全部内容均为开源的。
 
+## 💻下载
+
+你可以到[Releases页面](https://github.com/GroupMountain/GMLIB/releases) 来下载最新的版本。
 
 ## 📕 编写插件和使用API
+
 请参考开发指南
 
 ## 🔨 构建项目
@@ -27,7 +30,7 @@ BDS**）的插件开发者提供更多的API，一定程度上弥补了 `LeviLam
 >
 > 当然，如果您愿意自己构建项目，或者向 `GMLIB` 贡献代码，您可以按照以下说明自行构建项目
 
-1. 克隆仓库到本地，并使用你熟悉的 IDE （VS / VSCode / CLion等）打开项目目录，对 cmake 项目进行编译生成。
+1. 克隆仓库到本地，并使用你熟悉的 IDE 打开项目目录，对 xmake 项目进行编译生成。
 2. 正常构建该项目即可。
 
 ## 🎬 参与贡献
@@ -56,34 +59,4 @@ BDS**）的插件开发者提供更多的API，一定程度上弥补了 `LeviLam
 - [@Tsubasa6848](https://github.com/Tsubasa6848)
 - [@EpsilonZunsat](https://github.com/EpsilonZunsat)
 - [@killcerr](https://github.com/killcerr)
-
-
-快去创建一个你的原生插件开发模板！
-# [CPP 插件开发模板](https://github.com/GroupMountain/GMLIB-Plugin-Template)
-
-## 编写C++
-CPP文档大概只需要告诉有什么
-
-请在你的插件项目根目录中输入指令
-```shell
-git clone https://github.com/GroupMountain/SDK-GMLIB
-```
-
-# LSE 开发
-### 导入API
-- 导出需要的命名空间，如下列导出的命名空间为 `GMLib_ModAPI`
-- 解析： `ll.import("需要导出的命名空间", "funtion_name")` 导入，其中 `funtion_name` 应替换为对应的导入函数。
-
-示例：
-```javascript
-const GMLib_Mod = {   
-    //导入命名空间GMLib_ModAPI 以及对应的函数->注册工作台有序合成配方                  
-    registerShapedRecipe:ll.import("GMLib_ModAPI", "registerShapedRecipe"),
-    //导入命名空间GMLib_ModAPI 以及对应的函数->注册工作台无序合成配方                  
-    registerShapelessRecipe:ll.import("GMLib_ModAPI", "registerShapelessRecipe")
-};
-//注册工作台有序合成配方
-GMLib_Mod.registerShapedRecipe("groupmountain:reinforced_deepslate_recipe", ["ABA", "BBB", "ABA"], ["minecraft:echo_shard", "minecraft:deepslate"], "minecraft:reinforced_deepslate", 1, "AlwaysUnlocked");
-//注册工作台无序合成配方
-GMLib_Mod.registerShapelessRecipe("groupmountain:quartz_recipe", ["minecraft:quartz_block"], "minecraft:quartz", 9, "AlwaysUnlocked");
-```
+- [@lostDeers](https://github.com/lostDeers)
