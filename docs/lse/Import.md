@@ -10,6 +10,9 @@
 
 - 目前仅支持 QuickJs 和 NodeJs，其它语言暂未提供快捷导入方式，可自行使用 `RemoteCall` 接口导入
 
+> 注意：
+> 若无特殊说明，一切API均需要在 `onServerStarted` 之后调用
+
 
 # 导入你所需要的类
 

@@ -61,6 +61,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#api" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -561,6 +566,19 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    实验性功能API
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -571,6 +589,79 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      获取实验启用状态
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      设置实验启用状态
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      设置实验性依赖
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id" class="md-nav__link">
+    <span class="md-ellipsis">
+      获取实验ID列表
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      获取实验性译名
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id-" class="md-nav__link">
+    <span class="md-ellipsis">
+      获取实验ID-译名映射表
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -651,6 +742,70 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      获取实验启用状态
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      设置实验启用状态
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      设置实验性依赖
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id" class="md-nav__link">
+    <span class="md-ellipsis">
+      获取实验ID列表
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      获取实验性译名
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id-" class="md-nav__link">
+    <span class="md-ellipsis">
+      获取实验ID-译名映射表
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -668,9 +823,78 @@
   
 
 
-  <h1>实验性功能API</h1>
-
-
+<h1 id="api">实验性内容API</h1>
+<p>使用Experiments类需要导入Experiments模块
+导入示例：
+[JavaScript]</p>
+<pre><code class="language-javascript">const { Experiments } = require('./GMLIB-LegacyRemoteCallApi/lib/GMLIB_API-JS');
+</code></pre>
+<blockquote>
+<p>注意：
+若无特殊说明，实验性内容相关API需要在 <code>onServerStarted</code> 之后调用。</p>
+</blockquote>
+<h3 id="_1">获取实验启用状态</h3>
+<p><code>Recipes.getExperimentEnabled(experiment_id: int)</code></p>
+<p>参数:</p>
+<ul>
+<li>experiment_id: 实验性ID。</li>
+</ul>
+<p>返回值：Boolean(实验性是否启用)</p>
+<p>[JavaScript]</p>
+<pre><code class="language-JavaScript">Recipes.getExperimentEnabled(6)
+</code></pre>
+<h3 id="_2">设置实验启用状态</h3>
+<p><code>Recipes.setExperimentEnabled(experiment_id: int, value: bool)</code></p>
+<p>参数:</p>
+<ul>
+<li>experiment_id: 实验性ID。</li>
+<li>value: 是否启用。</li>
+</ul>
+<p>返回值：Boolean(是否设置成功)</p>
+<p>[JavaScript]</p>
+<pre><code class="language-JavaScript">Recipes.setExperimentEnabled(6, true)
+</code></pre>
+<blockquote>
+<p>注意：
+请不要随意关闭实验性玩法，这可能导致错误
+部分实验性玩法修改后需要重启服务器才能生效。</p>
+</blockquote>
+<h3 id="_3">设置实验性依赖</h3>
+<p>如果插件需要某个实验性玩法，请直接设置依赖项，GMLIB会在开服前自动启用。</p>
+<p><code>Recipes.registerExperimentsRequire(experiment_id: id)</code></p>
+<p>参数:</p>
+<ul>
+<li>experiment_id: 实验性ID。</li>
+</ul>
+<p>返回值：无</p>
+<p>[JavaScript]</p>
+<pre><code class="language-JavaScript">Recipes.getExperimentEnabled(6)
+</code></pre>
+<blockquote>
+<p>注意：
+此API请在 <code>onServerStarted</code> 之前调用。</p>
+</blockquote>
+<h3 id="id">获取实验ID列表</h3>
+<p><code>Recipes.getAllExperiments()</code></p>
+<p>返回值：Array<Int> (一个包含所有实验性ID的数组)</p>
+<h3 id="_4">获取实验性译名</h3>
+<p>将实验性ID翻译成译名。翻译结果取决于服务端语言。</p>
+<p><code>Recipes.getExperimentTranslatedName(experiment_id: id)</code></p>
+<p>参数:</p>
+<ul>
+<li>experiment_id: 实验性ID。</li>
+</ul>
+<p>返回值：String（实验性译名）</p>
+<p>[JavaScript]</p>
+<pre><code class="language-JavaScript">Recipes.getExperimentTranslatedName(6)
+</code></pre>
+<blockquote>
+<p>注意：
+此API请在 <code>onServerStarted</code> 之前调用。</p>
+</blockquote>
+<h3 id="id-">获取实验ID-译名映射表</h3>
+<p><code>Recipes.getExperimentsMap()</code></p>
+<p>返回值：Object (实验性ID和译名的映射)</p>
 
 
 

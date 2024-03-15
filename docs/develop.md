@@ -9,6 +9,7 @@
 # 脚本插件开发（LSE）
 - `GMLIB` 本身并不提供脚本插件API，你需要安装扩展模块 `GMLIB-LegacyRemoteCallApi`
 - 安装完前置模块后，正常创建插件并导入API
+
 使用示例：
 ```javascript
 const { Minecraft } = require('./GMLIB-LegacyRemoteCallApi/lib/GMLIB_API-JS');
