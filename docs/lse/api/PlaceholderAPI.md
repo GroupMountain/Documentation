@@ -18,7 +18,7 @@ const { PAPI } = require('./GMLIB-LegacyRemoteCallApi/lib/BEPlaceholderAPI-JS');
 - pluginName: 你的插件的名字，用于检索对应插件注册的PAPI.
 - PAPIName: 注册的PlaceholderAPI的名字，注意不要用 `%` 包裹
 
-返回值：Boolean（是否注册成功）
+返回值：`Boolean`（是否注册成功）
 
 [JavaScript]
 ```JavaScript
@@ -40,7 +40,7 @@ PAPI.registerPlayerPlaceholder(getPlayerUuid, "MyPlugin", "pl_uuid");
 - pluginName: 你的插件的名字，用于检索对应插件注册的PAPI.
 - PAPIName: 注册的PlaceholderAPI的名字，注意不要用 `%` 包裹
 
-返回值：Boolean（是否注册成功）
+返回值：`Boolean`（是否注册成功）
 
 [JavaScript]
 ```JavaScript
@@ -61,7 +61,7 @@ PAPI.registerServerPlaceholder(getOnlinePlayersCount, "MyPlugin", "server_online
 - str: 需要翻译的字符串，里面可以包含不止一个PAPI，可以有其他无关内容
 - pl: 玩家对象，选填。如果填写了玩家对象，这个字符串里面的关于该玩家对象的变量也会被翻译。
 
-返回值：String（翻译了全部PAPI变量的字符串）
+返回值：`String`（翻译了全部PAPI变量的字符串）
 
 [JavaScript]
 ```JavaScript
@@ -75,7 +75,7 @@ let result2 = PAPI.translateString("服务器mspt：%server_mspt%, 玩家名：%
 ### 获取已注册的全部PAPI
 `PAPI.getAllPAPI()`
 
-返回值：List<String>（一个包含全部PAPI的数组）
+返回值：`List<String>`（一个包含全部PAPI的数组）
 
 [JavaScript]
 ```JavaScript
@@ -89,7 +89,7 @@ let All_PAPI = PAPI.getAllPAPI();
 
 - papi: 需要注销的PAPI（不要带`%`包裹）
 
-返回值：Boolean（是否注销成功）
+返回值：`Boolean`（是否注销成功）
 
 [JavaScript]
 ```JavaScript
@@ -101,9 +101,9 @@ PAPI.unRegisterPlaceholder("server_mspt")
 
 参数：
 
-- papi: 需要翻译的（不要带`%`包裹）
+- papi: 需要翻译的PAPI（不要带`%`包裹）
 
-返回值：String（翻译后的PAPI）
+返回值：`String`（翻译后的PAPI）
 
 [JavaScript]
 ```JavaScript
@@ -118,10 +118,10 @@ PAPI.PAPI.getValue("server_mspt");
 
 参数：
 
-- papi: 需要注销的PAPI（不要带`%`包裹）
+- papi: 需要翻译的PAPI（不要带`%`包裹）
 - pl: 玩家对象
 
-返回值：String（翻译后的PAPI）
+返回值：`String`（翻译后的PAPI）
 
 [JavaScript]
 ```JavaScript

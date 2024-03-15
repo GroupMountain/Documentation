@@ -878,7 +878,7 @@
 <li>pluginName: 你的插件的名字，用于检索对应插件注册的PAPI.</li>
 <li>PAPIName: 注册的PlaceholderAPI的名字，注意不要用 <code>%</code> 包裹</li>
 </ul>
-<p>返回值：Boolean（是否注册成功）</p>
+<p>返回值：<code>Boolean</code>（是否注册成功）</p>
 <p>[JavaScript]</p>
 <pre><code class="language-JavaScript">function getPlayerUuid(pl) {
     return pl.uuid;
@@ -896,7 +896,7 @@ PAPI.registerPlayerPlaceholder(getPlayerUuid, &quot;MyPlugin&quot;, &quot;pl_uui
 <li>pluginName: 你的插件的名字，用于检索对应插件注册的PAPI.</li>
 <li>PAPIName: 注册的PlaceholderAPI的名字，注意不要用 <code>%</code> 包裹</li>
 </ul>
-<p>返回值：Boolean（是否注册成功）</p>
+<p>返回值：<code>Boolean</code>（是否注册成功）</p>
 <p>[JavaScript]</p>
 <pre><code class="language-JavaScript">function getOnlinePlayersCount() {
     return mc.getAllPlayers().length.toString();
@@ -913,7 +913,7 @@ PAPI.registerServerPlaceholder(getOnlinePlayersCount, &quot;MyPlugin&quot;, &quo
 <li>str: 需要翻译的字符串，里面可以包含不止一个PAPI，可以有其他无关内容</li>
 <li>pl: 玩家对象，选填。如果填写了玩家对象，这个字符串里面的关于该玩家对象的变量也会被翻译。</li>
 </ul>
-<p>返回值：String（翻译了全部PAPI变量的字符串）</p>
+<p>返回值：<code>String</code>（翻译了全部PAPI变量的字符串）</p>
 <p>[JavaScript]</p>
 <pre><code class="language-JavaScript">let result1 = PAPI.translateString(&quot;服务器mspt：%server_mspt%, 服务器TPS：%server_tps%&quot;);
 // 这样就得到的result1就是翻译了全部PAPI的语句。例如 服务器mspt：1.919810, 服务器TPS：20.000000
@@ -923,7 +923,7 @@ let result2 = PAPI.translateString(&quot;服务器mspt：%server_mspt%, 玩家�
 </code></pre>
 <h3 id="papi_3">获取已注册的全部PAPI</h3>
 <p><code>PAPI.getAllPAPI()</code></p>
-<p>返回值：List<String>（一个包含全部PAPI的数组）</p>
+<p>返回值：<code>List&lt;String&gt;</code>（一个包含全部PAPI的数组）</p>
 <p>[JavaScript]</p>
 <pre><code class="language-JavaScript">let All_PAPI = PAPI.getAllPAPI();
 </code></pre>
@@ -933,7 +933,7 @@ let result2 = PAPI.translateString(&quot;服务器mspt：%server_mspt%, 玩家�
 <ul>
 <li>papi: 需要注销的PAPI（不要带<code>%</code>包裹）</li>
 </ul>
-<p>返回值：Boolean（是否注销成功）</p>
+<p>返回值：<code>Boolean</code>（是否注销成功）</p>
 <p>[JavaScript]</p>
 <pre><code class="language-JavaScript">PAPI.unRegisterPlaceholder(&quot;server_mspt&quot;)
 </code></pre>
@@ -941,9 +941,9 @@ let result2 = PAPI.translateString(&quot;服务器mspt：%server_mspt%, 玩家�
 <p><code>PAPI.getValue(papi: String)</code></p>
 <p>参数：</p>
 <ul>
-<li>papi: 需要翻译的（不要带<code>%</code>包裹）</li>
+<li>papi: 需要翻译的PAPI（不要带<code>%</code>包裹）</li>
 </ul>
-<p>返回值：String（翻译后的PAPI）</p>
+<p>返回值：<code>String</code>（翻译后的PAPI）</p>
 <p>[JavaScript]</p>
 <pre><code class="language-JavaScript">PAPI.PAPI.getValue(&quot;server_mspt&quot;);
 </code></pre>
@@ -955,10 +955,10 @@ let result2 = PAPI.translateString(&quot;服务器mspt：%server_mspt%, 玩家�
 <p><code>PAPI.getValueByPlayer(papi: String, pl: Player)</code></p>
 <p>参数：</p>
 <ul>
-<li>papi: 需要注销的PAPI（不要带<code>%</code>包裹）</li>
+<li>papi: 需要翻译的PAPI（不要带<code>%</code>包裹）</li>
 <li>pl: 玩家对象</li>
 </ul>
-<p>返回值：String（翻译后的PAPI）</p>
+<p>返回值：<code>String</code>（翻译后的PAPI）</p>
 <p>[JavaScript]</p>
 <pre><code class="language-JavaScript">PAPI.getValue(&quot;player_name&quot;, pl);
 </code></pre>
