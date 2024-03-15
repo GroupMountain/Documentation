@@ -48,7 +48,7 @@ function getOnlinePlayersCount() {
     return mc.getAllPlayers().length.toString();
 }
 
-PAPI.registerServerPlaceholder(getPlayerUuid, "MyPlugin", "server_online_players");
+PAPI.registerServerPlaceholder(getOnlinePlayersCount, "MyPlugin", "server_online_players");
 
 // 这样就注册了一个PAPI，为 "%server_online_players%"
 ```
