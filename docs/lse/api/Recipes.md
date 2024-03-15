@@ -1,4 +1,4 @@
-# Recipes
+# 合成表API
 使用Recipes类需要导入Recipes模块
 导入示例：
 ```javascript
