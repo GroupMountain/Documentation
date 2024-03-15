@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../lse/api/GMLIB/">
       
-      
-        <link rel="next" href="../cpp/EventAPI/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>插件开发 - 文档站</title>
+        <title>BEPlaceholderAPI - 文档站</title>
       
     
     
@@ -62,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#c" class="md-skip">
+        <a href="#beplaceholderapi" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              插件开发
+              BEPlaceholderAPI
             
           </span>
         </div>
@@ -232,19 +230,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../develop/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -253,7 +242,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -641,10 +629,19 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../PAPI/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -653,6 +650,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -693,29 +691,24 @@
   
 
 
-<h1 id="c">原生插件开发（C++）</h1>
+<h1 id="beplaceholderapi">BEPlaceholderAPI</h1>
 <ul>
-<li>导入静态库和头文件
-往xmake.lua里面添加对应的库，并克隆SDK-GMLIB作为子模块。<blockquote>
-<p>这里直接建议使用我们提供的插件模板，一切工作均已就绪，无需手动操作。
-<a href="https://github.com/GroupMountain/GMLIB-Plugin-Template">CPP 插件开发模板</a></p>
-</blockquote>
-</li>
-<li>编写并测试你的插件<blockquote>
-<p>API功能请参照命名。如有问题可在交流群交流。</p>
-</blockquote>
-</li>
+<li>在 LL2 的独立版 <code>BEPlaceholderAPI</code> 插件已经不会再更新，原 <code>BEPlaceholderAPI</code> 已和 <code>GMLIB</code> 合并。</li>
+<li>存在于 <code>GMLIB</code> 中的 <code>PlaceholderAPI</code> 相关接口均为 <code>BEPlaceholderAPI</code> 接口的官方迁移版本。</li>
 </ul>
-<h1 id="lse">脚本插件开发（LSE）</h1>
+<h1 id="api">API变化通知</h1>
 <ul>
-<li><code>GMLIB</code> 本身并不提供脚本插件API，你需要安装扩展模块 <code>GMLIB-LegacyRemoteCallApi</code></li>
-<li>安装完前置模块后，正常创建插件并导入API</li>
+<li>为保留LSE插件兼容性，一切RemoteCall接口的函数的导出名和命名空间均没有变化。</li>
+<li>但是现在注册和翻译玩家PAPI不再使用xuid，现在直接使用玩家对象。</li>
 </ul>
-<p>使用示例：</p>
-<pre><code class="language-javascript">const { Minecraft } = require('./GMLIB-LegacyRemoteCallApi/lib/GMLIB_API-JS');
-</code></pre>
+<h1 id="lse">LSE插件适配与迁移</h1>
 <ul>
-<li>编写并测试你的插件</li>
+<li>将require路径改为<code>const { PAPI } = require('./GMLIB-LegacyRemoteCallApi/lib/BEPlaceholderAPI-JS');</code></li>
+<li>将原来的关于玩家PAPI注册和翻译参数里面的xuid直接改为玩家对象。</li>
+</ul>
+<h1 id="api_1">API接口</h1>
+<ul>
+<li>请参阅开发指南</li>
 </ul>
 
 

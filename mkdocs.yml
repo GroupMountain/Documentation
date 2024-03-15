@@ -18,4 +18,5 @@ nav:
           - 实验性功能API: "lse/api/Experiments.md"
           - 事件API: "lse/api/Event.md"
           - GMLIB版本: "lse/api/GMLIB.md"
+  - BEPlaceholderAPI: "PAPI.md"
 theme: material
