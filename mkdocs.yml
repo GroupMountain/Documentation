@@ -1,0 +1,21 @@
+site_name: 文档站
+repo_url: https://github.com/GroupMountain/GMLIB
+nav:
+  - GMLIB: "index.md"
+  - 插件开发: "develop.md"
+  - C++插件开发指南:
+      - EventAPI: "cpp/EventAPI.md"
+      - FileAPI: "cpp/FileAPI.md"
+      - ServerAPI: "cpp/ServerAPI.md"
+      - ModAPI: "cpp/ModAPI.md"
+  - 脚本插件开发指南:
+      - 导入API模块: "lse/Import.md"
+      - API模块简介:
+          - 基础游戏API: "lse/api/Minecraft.md"
+          - 悬浮字API: "lse/api/FloatingText.md"
+          - PlaceholderAPI: "lse/api/PlaceholderAPI.md"
+          - 合成表API: "lse/api/Recipes.md"
+          - 实验性功能API: "lse/api/Experiments.md"
+          - 事件API: "lse/api/Event.md"
+          - GMLIB版本: "lse/api/GMLIB.md"
+theme: material
