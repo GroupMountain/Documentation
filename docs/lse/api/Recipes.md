@@ -17,7 +17,8 @@ unlock: string
 
 参数:
 
-- recipe_id: 合成表的唯一标识符。
+- recipe_id: 
+  合成表的唯一标识符。
 - ingredients: 材料数组，表示无序排列。
 - result: 合成结果。
 - count: 合成结果的数量。
@@ -118,7 +119,7 @@ reagent: string
 Recipes.registerBrewingContainerRecipe("recipe_id", "input", "output", "reagent")
 ```
 
-### 注册锻造变形表:
+### 注册锻造配方合成表:
 
 `Recipes.registerSmithingTransformRecipe(
 recipe_id: string,
@@ -142,7 +143,7 @@ result: string
 Recipes.registerSmithingTransformRecipe("recipe_id", "template", "base", "addition", "result")
 ```
 
-### 注册锻造修剪表:
+### 注册锻造纹饰合成表:
 
 `Recipes.registerSmithingTrimRecipe(
 recipe_id: string,

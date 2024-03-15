@@ -632,7 +632,7 @@
         <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
-      注册锻造变形表:
+      注册锻造配方合成表:
     </span>
   </a>
   
@@ -641,7 +641,7 @@
         <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
-      注册锻造修剪表:
+      注册锻造纹饰合成表:
     </span>
   </a>
   
@@ -853,7 +853,7 @@
         <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
-      注册锻造变形表:
+      注册锻造配方合成表:
     </span>
   </a>
   
@@ -862,7 +862,7 @@
         <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
-      注册锻造修剪表:
+      注册锻造纹饰合成表:
     </span>
   </a>
   
@@ -946,7 +946,8 @@ unlock: string
 )</code></p>
 <p>参数:</p>
 <ul>
-<li>recipe_id: 合成表的唯一标识符。</li>
+<li>recipe_id: 
+  合成表的唯一标识符。</li>
 <li>ingredients: 材料数组，表示无序排列。</li>
 <li>result: 合成结果。</li>
 <li>count: 合成结果的数量。</li>
@@ -1027,7 +1028,7 @@ reagent: string
 <p>[JavaScript]</p>
 <pre><code class="language-JavaScript">Recipes.registerBrewingContainerRecipe(&quot;recipe_id&quot;, &quot;input&quot;, &quot;output&quot;, &quot;reagent&quot;)
 </code></pre>
-<h3 id="_6">注册锻造变形表:</h3>
+<h3 id="_6">注册锻造配方合成表:</h3>
 <p><code>Recipes.registerSmithingTransformRecipe(
 recipe_id: string,
 smithing_template: string,
@@ -1046,7 +1047,7 @@ result: string
 <p>[JavaScript]</p>
 <pre><code class="language-JavaScript">Recipes.registerSmithingTransformRecipe(&quot;recipe_id&quot;, &quot;template&quot;, &quot;base&quot;, &quot;addition&quot;, &quot;result&quot;)
 </code></pre>
-<h3 id="_7">注册锻造修剪表:</h3>
+<h3 id="_7">注册锻造纹饰合成表:</h3>
 <p><code>Recipes.registerSmithingTrimRecipe(
 recipe_id: string,
 smithing_template: string,
