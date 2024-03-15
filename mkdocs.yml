@@ -1,9 +1,10 @@
 site_name: GMLIB
 repo_url: https://github.com/GroupMountain/GMLIB
 nav:
-  - 主页: "index.md"
-  - API:
-      - CPP开发API:
+  - GMLIB: "index.md"
+  - 开发指南: "develop.md"
+  - API接口:
+      - C++接口:
           - 事件:
               - "实体事件": "./cpp/event/entity.md"
               - "全局事件": "./cpp/event/Level.md"
@@ -12,5 +13,4 @@ nav:
       - LSE开发API:
         - "ModAPI": "./lse/mod.md"
         - "虚拟在线玩家API": "./lse/fakelist.md"
-  - 关于: "About.md"
 theme: material
