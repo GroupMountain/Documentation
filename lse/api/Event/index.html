@@ -20,7 +20,7 @@
     
     
       
-        <title>事件API - 文档站</title>
+        <title>事件API - Group Mountain Library 文档站</title>
       
     
     
@@ -78,7 +78,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="文档站" class="md-header__button md-logo" aria-label="文档站" data-md-component="logo">
+    <a href="../../.." title="Group Mountain Library 文档站" class="md-header__button md-logo" aria-label="Group Mountain Library 文档站" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -92,7 +92,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            文档站
+            Group Mountain Library 文档站
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -185,13 +185,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="文档站" class="md-nav__button md-logo" aria-label="文档站" data-md-component="logo">
+    <a href="../../.." title="Group Mountain Library 文档站" class="md-nav__button md-logo" aria-label="Group Mountain Library 文档站" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
-    文档站
+    Group Mountain Library 文档站
   </label>
   
     <div class="md-nav__source">
@@ -702,6 +702,30 @@
 导入示例：</p>
 <pre><code class="language-javascript">const { Event } = require('./GMLIB-LegacyRemoteCallApi/lib/EventAPI-JS');
 </code></pre>
+<h1 id="_1">使用方法</h1>
+<ul>
+<li>类似LSE自带事件使用方法。但是此处使用Event类</li>
+</ul>
+<p>使用示例：</p>
+<pre><code class="language-javascript">Event.listen(&quot;onMobPick&quot;, (entity, itemEntity) =&gt; {
+    if (entity.type == &quot;minecraft:zombie&quot; &amp;&amp; itemEntity.toItem().type == &quot;minecraft:netherite_sword&quot;) {
+        return false;
+    }
+});
+// 监听生物捡起物品，如果是僵尸捡起下界合金键，则拦截此事件。
+</code></pre>
+<h1 id="_2">事件列表</h1>
+<h3 id="onmobpick-">"onMobPick" - 生物捡起物品</h3>
+<ul>
+<li>监听函数原型：<br />
+<code>function(entity, itemEntity)</code></li>
+<li>entity: <code>Entity</code><br />
+  捡起物品的生物</li>
+<li>itemEntity: <code>Entity</code><br />
+  被捡起的掉落物实体</li>
+<li>拦截事件： 返回 <code>false</code>  </li>
+</ul>
+<p>注意： 该事件仅会被生物触发，玩家捡起物品不触发。</p>
 
 
 

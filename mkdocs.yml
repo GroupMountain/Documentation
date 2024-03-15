@@ -1,4 +1,4 @@
-site_name: 文档站
+site_name: Group Mountain Library 文档站
 repo_url: https://github.com/GroupMountain/GMLIB
 nav:
   - GMLIB: "index.md"
