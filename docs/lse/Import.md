@@ -19,6 +19,8 @@
 ### 目前 `GMLIB-LegacyRemoteCallApi` 提供了以下类
 - PAPI
 - Event
+- Scoreboard
+- JsonConfig
 - StaticFloatingText
 - DynamicFloatingText
 - Minecraft
@@ -29,6 +31,8 @@
 ### 你可以使用以下方式进行导入
 - `const { PAPI } = require('./GMLIB-LegacyRemoteCallApi/lib/BEPlaceholderAPI-JS');`
 - `const { Event } = require('./GMLIB-LegacyRemoteCallApi/lib/EventAPI-JS');`
+- `const { Scoreboard } = require('./GMLIB-LegacyRemoteCallApi/lib/GMLIB_API-JS');`
+- `const { JsonConfig } = require('./GMLIB-LegacyRemoteCallApi/lib/GMLIB_API-JS');`
 - `const { StaticFloatingText } = require('./GMLIB-LegacyRemoteCallApi/lib/GMLIB_API-JS');`
 - `const { DynamicFloatingText } = require('./GMLIB-LegacyRemoteCallApi/lib/GMLIB_API-JS');`
 - `const { Minecraft } = require('./GMLIB-LegacyRemoteCallApi/lib/GMLIB_API-JS');`

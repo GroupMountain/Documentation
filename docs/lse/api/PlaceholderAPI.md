@@ -125,7 +125,7 @@ PAPI.PAPI.getValue("server_mspt");
 
 [JavaScript]
 ```JavaScript
-PAPI.getValue("player_name", pl);
+PAPI.getValueByPlayer("player_name", pl);
 ```
 
 > 注意：
