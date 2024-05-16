@@ -97,7 +97,7 @@ Event.listen("onMobPick", (entity, itemEntity) => {
   玩家对象  
 - 拦截事件： 返回 `false`
 
-### "onDeathMessage" - 触发死亡信息(没搞懂，留着)
+### "onDeathMessage" - 触发死亡信息
 - 监听函数原型：  
 `function(deathMsgKey,deathMsgParams,entity)`  
 - deathMsgKey: `String`   
