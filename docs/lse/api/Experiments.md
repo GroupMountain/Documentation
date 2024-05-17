@@ -12,7 +12,7 @@ const { Experiments } = require('./GMLIB-LegacyRemoteCallApi/lib/GMLIB_API-JS');
 
 ### 获取实验启用状态
 
-`Recipes.getExperimentEnabled(experiment_id: int)`
+`Experiments.getExperimentEnabled(experiment_id: int)`
 
 参数:
 
@@ -22,12 +22,12 @@ const { Experiments } = require('./GMLIB-LegacyRemoteCallApi/lib/GMLIB_API-JS');
 
 [JavaScript]
 ```JavaScript
-Recipes.getExperimentEnabled(6)
+Experiments.getExperimentEnabled(6)
 ```
 
 ### 设置实验启用状态
 
-`Recipes.setExperimentEnabled(experiment_id: int, value: bool)`
+`Experiments.setExperimentEnabled(experiment_id: int, value: bool)`
 
 参数:
 
@@ -38,7 +38,7 @@ Recipes.getExperimentEnabled(6)
 
 [JavaScript]
 ```JavaScript
-Recipes.setExperimentEnabled(6, true)
+Experiments.setExperimentEnabled(6, true)
 ```
 
 > 注意：
@@ -48,7 +48,7 @@ Recipes.setExperimentEnabled(6, true)
 ### 设置实验性依赖
 如果插件需要某个实验性玩法，请直接设置依赖项，GMLIB会在开服前自动启用。
 
-`Recipes.registerExperimentsRequire(experiment_id: id)`
+`Experiments.registerExperimentsRequire(experiment_id: id)`
 
 参数:
 
@@ -58,7 +58,7 @@ Recipes.setExperimentEnabled(6, true)
 
 [JavaScript]
 ```JavaScript
-Recipes.getExperimentEnabled(6)
+Experiments.getExperimentEnabled(6)
 ```
 
 > 注意：
@@ -66,26 +66,27 @@ Recipes.getExperimentEnabled(6)
 
 ### 获取实验ID列表
 
-`Recipes.getAllExperiments()`
+`Experiments.getAllExperiments()`
 
 
 返回值：Array<Int> (一个包含所有实验性ID的数组)
 
 
-### 获取实验性译名
-将实验性ID翻译成译名。翻译结果取决于服务端语言。
+### 获取实验性键名
+将实验性ID转化为键名。  
+如需翻译，请使用I18nAPI翻译为对应的可读语言。
 
-`Recipes.getExperimentTranslatedName(experiment_id: id)`
+`Experiments.getExperimentTranslateKey(experiment_id: id)`
 
 参数:
 
 - experiment_id: 实验性ID。
 
-返回值：String（实验性译名）
+返回值：String（实验性键名）
 
 [JavaScript]
 ```JavaScript
-Recipes.getExperimentTranslatedName(6)
+Experiments.getExperimentTranslateKey(6)
 ```
 
 > 注意：
@@ -94,7 +95,7 @@ Recipes.getExperimentTranslatedName(6)
 
 ### 获取实验ID-译名映射表
 
-`Recipes.getExperimentsMap()`
+`Experiments.getExperimentsMap()`
 
 返回值：Object (实验性ID和译名的映射)
 
