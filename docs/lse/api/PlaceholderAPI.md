@@ -53,6 +53,28 @@ PAPI.registerServerPlaceholder(getOnlinePlayersCount, "MyPlugin", "server_online
 // 这样就注册了一个PAPI，为 "%server_online_players%"
 ```
 
+### 注册带变量的API
+> 这里以注册服务器PAPI变量演示   
+
+`PAPI.registerServerPlaceholder(func: function, pluginName: String, PAPIName: String)`   
+[JavaScript]
+```JavaScript
+const { PAPI } = require('./GMLIB-LegacyRemoteCallApi/lib/BEPlaceholderAPI-JS');
+const { Minecraft } = require("./GMLIB-LegacyRemoteCallApi/lib/GMLIB_API-JS");
+
+function getAverageTps(param) {
+    let tps = Minecraft.getServerAverageTps();
+    let fix = param["<fixed>"];
+    return tps.toFixed(fix);
+};
+
+// 这里的<fixed>就是带参数的变量，只要是<>包裹的都可以，但请注意！
+/** 变量前后一定要加“_”和其他字符串区分！！！不然param给的会和其他字符串串一起 */
+PAPI.registerServerPlaceholder(getOnlinePlayersCount, "MyPlugin", "%server_average_tps_<fixed>%");
+
+// 这样就注册了一个PAPI，为 "%server_average_tps_<fixed>%"
+```
+
 ### 翻译包含PAPI的字符串
 `PAPI.translateString(str: String [, pl：Player])`
 
