@@ -61,9 +61,6 @@ Experiments.setExperimentEnabled(6, true)
 Experiments.getExperimentEnabled(6)
 ```
 
-> 注意：
-> 此API请在 `onServerStarted` 之前调用。
-
 ### 获取实验ID列表
 
 `Experiments.getAllExperiments()`
@@ -89,9 +86,6 @@ Experiments.getExperimentEnabled(6)
 
 Experiments.getExperimentTranslateKey(6)
 ```
-
-> 注意：
-> 此API请在 `onServerStarted` 之前调用。
 
 
 ### 获取实验ID-译名映射表

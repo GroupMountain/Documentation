@@ -671,6 +671,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#id-" class="md-nav__link">
+    <span class="md-ellipsis">
+      获取实验ID-译名映射表
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -891,6 +900,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#id-" class="md-nav__link">
+    <span class="md-ellipsis">
+      获取实验ID-译名映射表
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -956,10 +974,6 @@
 <p>[JavaScript]</p>
 <pre><code class="language-JavaScript">Experiments.getExperimentEnabled(6)
 </code></pre>
-<blockquote>
-<p>注意：
-此API请在 <code>onServerStarted</code> 之前调用。</p>
-</blockquote>
 <h3 id="id">获取实验ID列表</h3>
 <p><code>Experiments.getAllExperiments()</code></p>
 <p>返回值：Array<Int> (一个包含所有实验性ID的数组)</p>
@@ -973,12 +987,9 @@
 </ul>
 <p>返回值：String（实验性键名）</p>
 <p>[JavaScript]</p>
-<pre><code class="language-JavaScript">Experiments.getExperimentTranslateKey(6)
+<pre><code class="language-JavaScript">
+Experiments.getExperimentTranslateKey(6)
 </code></pre>
-<blockquote>
-<p>注意：
-此API请在 <code>onServerStarted</code> 之前调用。</p>
-</blockquote>
 <h3 id="id-">获取实验ID-译名映射表</h3>
 <p><code>Experiments.getExperimentsMap()</code></p>
 <p>返回值：Object (实验性ID和译名的映射)</p>
