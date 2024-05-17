@@ -671,15 +671,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#id-" class="md-nav__link">
-    <span class="md-ellipsis">
-      获取实验ID-译名映射表
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -738,7 +729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../GMLIB/" class="md-nav__link">
+      <a href="../Version/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -900,15 +891,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#id-" class="md-nav__link">
-    <span class="md-ellipsis">
-      获取实验ID-译名映射表
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -938,17 +920,17 @@
 若无特殊说明，实验性内容相关API需要在 <code>onServerStarted</code> 之后调用。</p>
 </blockquote>
 <h3 id="_1">获取实验启用状态</h3>
-<p><code>Recipes.getExperimentEnabled(experiment_id: int)</code></p>
+<p><code>Experiments.getExperimentEnabled(experiment_id: int)</code></p>
 <p>参数:</p>
 <ul>
 <li>experiment_id: 实验性ID。</li>
 </ul>
 <p>返回值：Boolean(实验性是否启用)</p>
 <p>[JavaScript]</p>
-<pre><code class="language-JavaScript">Recipes.getExperimentEnabled(6)
+<pre><code class="language-JavaScript">Experiments.getExperimentEnabled(6)
 </code></pre>
 <h3 id="_2">设置实验启用状态</h3>
-<p><code>Recipes.setExperimentEnabled(experiment_id: int, value: bool)</code></p>
+<p><code>Experiments.setExperimentEnabled(experiment_id: int, value: bool)</code></p>
 <p>参数:</p>
 <ul>
 <li>experiment_id: 实验性ID。</li>
@@ -956,7 +938,7 @@
 </ul>
 <p>返回值：Boolean(是否设置成功)</p>
 <p>[JavaScript]</p>
-<pre><code class="language-JavaScript">Recipes.setExperimentEnabled(6, true)
+<pre><code class="language-JavaScript">Experiments.setExperimentEnabled(6, true)
 </code></pre>
 <blockquote>
 <p>注意：
@@ -965,40 +947,37 @@
 </blockquote>
 <h3 id="_3">设置实验性依赖</h3>
 <p>如果插件需要某个实验性玩法，请直接设置依赖项，GMLIB会在开服前自动启用。</p>
-<p><code>Recipes.registerExperimentsRequire(experiment_id: id)</code></p>
+<p><code>Experiments.registerExperimentsRequire(experiment_id: id)</code></p>
 <p>参数:</p>
 <ul>
 <li>experiment_id: 实验性ID。</li>
 </ul>
 <p>返回值：无</p>
 <p>[JavaScript]</p>
-<pre><code class="language-JavaScript">Recipes.getExperimentEnabled(6)
+<pre><code class="language-JavaScript">Experiments.getExperimentEnabled(6)
 </code></pre>
 <blockquote>
 <p>注意：
 此API请在 <code>onServerStarted</code> 之前调用。</p>
 </blockquote>
 <h3 id="id">获取实验ID列表</h3>
-<p><code>Recipes.getAllExperiments()</code></p>
+<p><code>Experiments.getAllExperiments()</code></p>
 <p>返回值：Array<Int> (一个包含所有实验性ID的数组)</p>
 <h3 id="_4">获取实验性译名</h3>
 <p>将实验性ID翻译成译名。翻译结果取决于服务端语言。</p>
-<p><code>Recipes.getExperimentTranslatedName(experiment_id: id)</code></p>
+<p><code>Experiments.getExperimentTranslatedName(experiment_id: id)</code></p>
 <p>参数:</p>
 <ul>
 <li>experiment_id: 实验性ID。</li>
 </ul>
 <p>返回值：String（实验性译名）</p>
 <p>[JavaScript]</p>
-<pre><code class="language-JavaScript">Recipes.getExperimentTranslatedName(6)
+<pre><code class="language-JavaScript">Experiments.getExperimentTranslatedName(6)
 </code></pre>
 <blockquote>
 <p>注意：
 此API请在 <code>onServerStarted</code> 之前调用。</p>
 </blockquote>
-<h3 id="id-">获取实验ID-译名映射表</h3>
-<p><code>Recipes.getExperimentsMap()</code></p>
-<p>返回值：Object (实验性ID和译名的映射)</p>
 
 
 
