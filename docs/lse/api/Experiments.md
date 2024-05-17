@@ -72,21 +72,30 @@ Experiments.getExperimentEnabled(6)
 返回值：Array<Int> (一个包含所有实验性ID的数组)
 
 
-### 获取实验性译名
-将实验性ID翻译成译名。翻译结果取决于服务端语言。
+### 获取实验性键名
+将实验性ID转化为键名。  
+如需翻译，请使用I18nAPI翻译为对应的可读语言。
 
-`Experiments.getExperimentTranslatedName(experiment_id: id)`
+`Experiments.getExperimentTranslateKey(experiment_id: id)`
 
 参数:
 
 - experiment_id: 实验性ID。
 
-返回值：String（实验性译名）
+返回值：String（实验性键名）
 
 [JavaScript]
 ```JavaScript
-Experiments.getExperimentTranslatedName(6)
+
+Experiments.getExperimentTranslateKey(6)
 ```
 
 > 注意：
 > 此API请在 `onServerStarted` 之前调用。
+
+
+### 获取实验ID-译名映射表
+
+`Experiments.getExperimentsMap()`
+
+返回值：Object (实验性ID和译名的映射)
