@@ -61,6 +61,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#api" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -639,7 +644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../GMLIB/" class="md-nav__link">
+      <a href="../Version/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -687,6 +692,19 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    玩家数据库API
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -697,6 +715,88 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      获取所有玩家
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xuiduuid" class="md-nav__link">
+    <span class="md-ellipsis">
+      通过XUID查UUID
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uuid" class="md-nav__link">
+    <span class="md-ellipsis">
+      通过名字查UUID
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uuid_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      通过UUID查名字
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xuid" class="md-nav__link">
+    <span class="md-ellipsis">
+      通过XUID查名字
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xuid_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      通过名字查XUID
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uuidxuid" class="md-nav__link">
+    <span class="md-ellipsis">
+      通过UUID查XUID
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -755,6 +855,79 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      获取所有玩家
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xuiduuid" class="md-nav__link">
+    <span class="md-ellipsis">
+      通过XUID查UUID
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uuid" class="md-nav__link">
+    <span class="md-ellipsis">
+      通过名字查UUID
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uuid_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      通过UUID查名字
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xuid" class="md-nav__link">
+    <span class="md-ellipsis">
+      通过XUID查名字
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xuid_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      通过名字查XUID
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uuidxuid" class="md-nav__link">
+    <span class="md-ellipsis">
+      通过UUID查XUID
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -772,9 +945,86 @@
   
 
 
-  <h1>玩家数据库API</h1>
-
-
+<h1 id="api">玩家数据库API</h1>
+<p>使用UserCache类需要导入UserCache模块
+导入示例：</p>
+<pre><code class="language-javascript">const { UserCache } = require('./GMLIB-LegacyRemoteCallApi/lib/GMLIB_API-JS');
+</code></pre>
+<h3 id="_1">获取所有玩家</h3>
+<pre><code class="language-javascript">UserCache.getAllPlayerInfo()
+</code></pre>
+<ul>
+<li>返回值：所有玩家信息</li>
+<li>返回值类型：Array&lt; Object &gt;<ul>
+<li>每个对象都含有以下属性：<ul>
+<li>Name：玩家名</li>
+<li>Xuid：玩家的XUID</li>
+<li>Uuid：玩家的UUID</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="xuiduuid">通过XUID查UUID</h3>
+<pre><code class="language-javascript">UserCache.getUuidByXuid()
+</code></pre>
+<ul>
+<li>返回值：玩家的UUID</li>
+<li>返回值类型：<code>String</code><ul>
+<li>如果返回值为<code>Null</code>，则代表查询失败</li>
+</ul>
+</li>
+</ul>
+<h3 id="uuid">通过名字查UUID</h3>
+<pre><code class="language-javascript">UserCache.getUuidByName()
+</code></pre>
+<ul>
+<li>返回值：玩家的UUID</li>
+<li>返回值类型：<code>String</code><ul>
+<li>如果返回值为<code>Null</code>，则代表查询失败</li>
+</ul>
+</li>
+</ul>
+<h3 id="uuid_1">通过UUID查名字</h3>
+<pre><code class="language-javascript">UserCache.getNameByUuid()
+</code></pre>
+<ul>
+<li>返回值：玩家的名字</li>
+<li>返回值类型：<code>String</code><ul>
+<li>如果返回值为<code>Null</code>，则代表查询失败</li>
+</ul>
+</li>
+</ul>
+<h3 id="xuid">通过XUID查名字</h3>
+<pre><code class="language-javascript">UserCache.getNameByXuid()
+</code></pre>
+<ul>
+<li>返回值：玩家的名字</li>
+<li>返回值类型：<code>String</code><ul>
+<li>如果返回值为<code>Null</code>，则代表查询失败</li>
+</ul>
+</li>
+</ul>
+<h3 id="xuid_1">通过名字查XUID</h3>
+<pre><code class="language-javascript">UserCache.getXuidByName()
+</code></pre>
+<ul>
+<li>返回值：玩家的XUID</li>
+<li>返回值类型：<code>String</code><ul>
+<li>如果返回值为<code>Null</code>，则代表查询失败</li>
+</ul>
+</li>
+</ul>
+<h3 id="uuidxuid">通过UUID查XUID</h3>
+<pre><code class="language-javascript">UserCache.getXuidByUuid()
+</code></pre>
+<ul>
+<li>返回值：玩家的XUID</li>
+<li>返回值类型：<code>String</code><ul>
+<li>如果返回值为<code>Null</code>，则代表查询失败</li>
+</ul>
+</li>
+</ul>
 
 
 

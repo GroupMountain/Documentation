@@ -86,6 +86,7 @@ Experiments.getExperimentEnabled(6)
 
 [JavaScript]
 ```JavaScript
+
 Experiments.getExperimentTranslateKey(6)
 ```
 
@@ -98,4 +99,3 @@ Experiments.getExperimentTranslateKey(6)
 `Experiments.getExperimentsMap()`
 
 返回值：Object (实验性ID和译名的映射)
-

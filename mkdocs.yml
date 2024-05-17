@@ -19,7 +19,7 @@ nav:
           - 实验性功能API: "lse/api/Experiments.md"
           - 事件API: "lse/api/Event.md"
           - 悬浮字API: "lse/api/FloatingText.md"
-          - 版本信息API: "lse/api/GMLIB.md"
+          - 版本信息API: "lse/api/Version.md"
           - I18nAPI: "lse/api/I18nAPI.md"
           - 玩家数据库API: "lse/api/UserCache.md"
   - BEPlaceholderAPI: "PAPI.md"
