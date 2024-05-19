@@ -741,6 +741,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#xuiduuidname" class="md-nav__link">
+    <span class="md-ellipsis">
+      通过XUID/UUID/NAME查玩家信息
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#xuiduuid" class="md-nav__link">
     <span class="md-ellipsis">
       通过XUID查UUID
@@ -874,6 +883,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#xuiduuidname" class="md-nav__link">
+    <span class="md-ellipsis">
+      通过XUID/UUID/NAME查玩家信息
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#xuiduuid" class="md-nav__link">
     <span class="md-ellipsis">
       通过XUID查UUID
@@ -955,8 +973,23 @@
 </code></pre>
 <ul>
 <li>返回值：所有玩家信息</li>
-<li>返回值类型：Array&lt; Object &gt;<ul>
+<li>返回值类型：<code>Array&lt;Object&gt;</code><ul>
 <li>每个对象都含有以下属性：<ul>
+<li>Name：玩家名</li>
+<li>Xuid：玩家的XUID</li>
+<li>Uuid：玩家的UUID</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="xuiduuidname">通过XUID/UUID/NAME查玩家信息</h3>
+<pre><code class="language-javascript">UserCache.getPlayerInfo(playerIdentifier)
+</code></pre>
+<ul>
+<li>返回值：玩家信息</li>
+<li>返回值类型：<code>Array&lt;Object&gt;</code> | <code>NULL</code><ul>
+<li>含有以下属性：<ul>
 <li>Name：玩家名</li>
 <li>Xuid：玩家的XUID</li>
 <li>Uuid：玩家的UUID</li>

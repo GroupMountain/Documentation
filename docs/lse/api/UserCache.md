@@ -11,12 +11,22 @@ const { UserCache } = require('./GMLIB-LegacyRemoteCallApi/lib/GMLIB_API-JS');
 UserCache.getAllPlayerInfo()
 ```
 - 返回值：所有玩家信息
-- 返回值类型：Array< Object >
+- 返回值类型：`Array<Object>`
     - 每个对象都含有以下属性：
         - Name：玩家名
         - Xuid：玩家的XUID
         - Uuid：玩家的UUID
 
+### 通过XUID/UUID/NAME查玩家信息
+```javascript
+UserCache.getPlayerInfo(playerIdentifier)
+```
+- 返回值：玩家信息
+- 返回值类型：`Array<Object>` | `NULL`
+    - 含有以下属性：
+        - Name：玩家名
+        - Xuid：玩家的XUID
+        - Uuid：玩家的UUID
 
 ### 通过XUID查UUID
 ```javascript
